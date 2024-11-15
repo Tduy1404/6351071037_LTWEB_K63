@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <!-- Đặt các tệp CSS của bạn tại đây -->
+
+    <script src="~/Script/tinymce_7.5.1/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: 'textarea' });</script>
+    @*<link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />*@
+</head>
+<body>
+    <style>
+        /* menu */
+
+        #templatemo_menu {
+            clear: both;
+            width: 960px;
+            height: 45px;
+            background: blue;
+            text-align: center;
+        }
+
+            #templatemo_menu ul {
+                padding: 13px 0 0 0;
+                margin: 0;
+                list-style: none;
+                display: inline-block;
+            }
+
+                #templatemo_menu ul li {
+                    display: inline;
+                }
+
+                    #templatemo_menu ul li a {
+                        float: left;
+                        padding: 0 20px;
+                        font-size: 24px;
+                        font-weight: bold;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #969547;
+                    }
+
+            #templatemo_menu li a:hover, #templatemo_menu li .current {
+                color: #fcf88e;
+            }
+
+        /* end of menu*/
+
+        /* header */
+    </style>
+    <div>
+        <!-- Menu hoặc thanh điều hướng -->
+        <div id="templatemo_menu" style="width: auto; background: #4dc7a4">
+            <ul>
+                <li>@Html.ActionLink("Trang chủ", "Index", "Admin", null, new { @class = "current" })</li>
+                <li>
+                    @Html.ActionLink("Quản Lý Chủ Đề", "Index", "Admin")
+                </li>
+                <li>
+                    @Html.ActionLink("Quản Lý Nhà Sản Xuất", "Index", "Admin")
+                </li>
+                <li>
+                    @Html.ActionLink("Quản Lý Sách", "Sach", "Admin")
+                </li>
+                <li>
+                    @Html.ActionLink("Thống Kê Sách", "ThongKeSach", "Admin")
+
+                </li>
+            </ul>
+        </div> <!-- Kết thúc menu -->
+        <!-- Nội dung chính của trang con sẽ được hiển thị tại đây -->
+        <div class="content">
+            @RenderBody()
+        </div>
+
+        <div id="templatemo_footer">
+
+           
+        </div>
+        <!-- Đặt các tệp JavaScript của bạn tại đây -->
+    </div>
+    @RenderSection("Scripts", required: false)
+   
+</body>
+</html>

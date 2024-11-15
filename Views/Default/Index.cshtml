@@ -1,0 +1,108 @@
+﻿@using BOOK.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<SACH>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<div id="templatemo_content_right">
+    <ul>
+        @foreach (var sach in Model)
+        {
+
+            <li>
+                <div class="templatemo_product_box" style="width:280px; height:300px">
+                    <h1>@sach.Tensach</h1>
+                    <img style=" width:100px; height:130px" alt="@sach.Tensach" src="~/Content/Hinhsanpham/@sach.Anhbia" />
+                    <div class="product_info">
+                        <p>Etiam luctus. Quisque facilisis suscipit elit. Curabitur...</p>
+                        <h3 class="price">@sach.Giaban</h3>
+                        <a href="@Url.Action("Details", "Default", new { id = sach.Masach })">View Details</a>
+                    </div>
+                    <div class="cleaner"></div>
+                </div>
+
+            </li>
+
+        }
+
+    </ul>
+    @*<div style=" margin-top: 650px; text-align:center">
+        Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
+        <div class="MenuTrang">
+
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { Page = page }))
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>*@
+<div style="margin-top:650px">
+
+
+    Trang @(Model.PageCount<Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
+    <div class="MenuTrang" style="text-align:center">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { Page = page }))
+
+    </div>
+</div>
+<style>
+    .MenuTrang {
+        margin-top: 15px;
+    }
+
+        .MenuTrang li {
+            display: inline-block; /* Sử dụng inline-block để dễ dàng đặt kích thước */
+        }
+
+        .MenuTrang a,
+        .MenuTrang span {
+            display: inline-block;
+            width: 38px;
+            height: 30px;
+            line-height: 30px; /* Canh giữa theo chiều dọc */
+            text-align: center;
+            background-color: #4dc7a4; /* Màu xanh lá */
+            color: #fff; /* Màu chữ trắng */
+            border-radius: 5px; /* Bo góc */
+            margin: 0 5px; /* Khoảng cách giữa các ô */
+            text-decoration: none; /* Bỏ gạch chân */
+            transition: background-color 0.3s ease; /* Hiệu ứng mượt khi hover */
+        }
+
+            /* Hiệu ứng hover */
+            .MenuTrang a:hover {
+                background-color: rgb(120, 183, 82); /* Màu xanh lá đậm hơn khi hover */
+            }
+
+        /* Đánh dấu trang hiện tại */
+        .MenuTrang .active {
+            background-color: rgb(132, 206, 132); /* Màu xanh lá đậm cho trang hiện tại */
+            cursor: default; /* Không cho phép click */
+        }
+</style>
+
+@*<script>
+         function formatCurrency(price) {
+             return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " đ";
+         }
+
+         document.addEventListener("DOMContentLoaded", function () {
+             // Định dạng giá hiển thị cho từng phần tử có class "price"
+             const priceElements = document.querySelectorAll(".price");
+
+             priceElements.forEach(function (element) {
+                 const price = parseInt(element.innerText.replace(/\D/g, '')); // Chuyển nội dung sang số và bỏ các ký tự không phải số
+                 if (!isNaN(price)) {
+                     element.innerText = formatCurrency(price); // Đặt lại nội dung theo định dạng
+                 }
+             });
+         });
+    </script>*@

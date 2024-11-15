@@ -1,0 +1,98 @@
+﻿@model BOOK.Models.SACH
+
+@{
+    ViewBag.Title = "Xoasach";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>XÁC NHẬN THÔNG TIN CẦN XÓA</h2>
+
+<h3>Bạn quyết định xóa quyển sách này?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Masach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Masach)
+        </dd>
+
+        <dt>
+            Tên sách:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensach)
+        </dd>
+
+        <dt>
+            Giá bán:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giaban) VNĐ
+        </dd>
+
+        <dt>
+            Mô tả:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            Ảnh bìa:
+        </dt>
+
+        <dd>
+            <img src="~/Content/Hinhsanpham/@Model.Anhbia" width="415px", height="479px"/>
+        </dd>
+
+        <dt>
+            Ngày cập nhật:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.Ngaycapnhat)
+        </dd>
+
+        <dt>
+            Số lượng tồn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluongton)
+        </dd>
+
+        <dt>
+            Chủ đề:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUDE.TenChuDe)
+        </dd>
+
+        <dt>
+            Nhà xuất bản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHAXUATBAN.TenNXB)
+        </dd>
+
+    </dl>
+
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" style="width:95px; height:37px" /> |
+            
+        </div>
+    }
+</div>

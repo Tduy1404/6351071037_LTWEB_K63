@@ -1,0 +1,91 @@
+﻿@model BOOK.Models.SACH
+
+@{
+    ViewBag.Title = "ChiTietSP";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Thông Tin Chi Tiết Sản Phẩm</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt  style="width:200px">
+           Mã Sách
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Masach)
+        </dd>
+
+        <dt  style="width:200px">
+           Tên sách:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tensach)
+        </dd>
+
+        <dt  style="width:200px">
+           Giá bán:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Giaban) VNĐ
+        </dd>
+
+        <dt  style="width:200px">
+           Mô tả:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt  style="width:200px">
+          Ảnh bìa:
+        </dt>
+
+        <dd>
+            <img src="~/Content/Hinhsanpham/@Model.Anhbia" width="305px" , height="200px" />
+        </dd>
+
+        <dt  style="width:200px">
+           Ngày cập nhật:
+        </dt>
+
+        <dd>
+         @String.Format("{0:dd/MM/yyyy}", Model.Ngaycapnhat)
+        </dd>
+
+        <dt  style="width:200px">
+          Số lượng tồn:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Soluongton)
+        </dd>
+
+        <dt  style="width:200px">
+         Chủ đề:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUDE.TenChuDe)
+        </dd>
+
+        <dt  style="width:200px">
+          Nhà xuất bản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NHAXUATBAN.TenNXB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

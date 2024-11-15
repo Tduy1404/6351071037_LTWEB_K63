@@ -1,0 +1,139 @@
+﻿@using BOOK.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<BOOK.Models.SACH>
+
+@{
+    ViewBag.Title = "Sach";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+<h2>Trang Quản Lý</h2>
+
+<p>
+    @Html.ActionLink("Thêm Sách", "ThemMoiSach")
+</p>
+
+
+<table class="table" border="1">
+    <tr>
+        <th style="width:200px">
+          Mã Sách
+        </th>
+        <th style="width:200px">
+          Tên Sách
+        </th>
+      
+        <th style="width:200px">
+          Giá Bán
+        </th>
+        <th style="width:200px">
+          Mô Tả
+        </th>
+        <th style="width:200px">
+           Ảnh Bìa
+        </th>
+        <th style="width:200px">
+           Ngày Cập Nhật
+        </th>
+        <th style="width:200px">
+           Số Lượng Tồn
+        </th>
+        <th style="width:200px">
+         Tên Chủ Đề
+        </th>
+        <th style="width:250px">
+         Tên Nhà Sản Xuất
+        </th>
+        <th style="width:200px"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Masach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tensach)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Giaban)
+            </td>
+            <td>
+                @Truncate(item.Mota, 100)
+            </td>
+            <td>
+                <img src="~/Content/Hinhsanpham/@item.Anhbia" width="305px" , height="200px" />
+
+            </td>
+            <td>
+                @String.Format("{0:dd/MM/yyyy}", item.Ngaycapnhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soluongton)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CHUDE.TenChuDe)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NHAXUATBAN.TenNXB)
+            </td>
+            <td>
+                @Html.ActionLink("Sửa", "SuaSach", new { id = item.Masach }) |
+                @Html.ActionLink("Chi Tiết", "ChiTietSP", new { id = item.Masach }) |
+                @Html.ActionLink("Xóa Sách", "Xoasach", new { id = item.Masach })
+            </td>
+        </tr>
+    }
+
+</table>
+Trang @(Model.PageCount<Model.PageNumber ? 0 : Model.PageNumber)/ @Model.PageCount
+<div class="MenuTrang" style="text-align:center">
+    @Html.PagedListPager(Model, page => Url.Action("Sach", new { page = page }))
+</div>
+
+<style>
+    .MenuTrang {
+        margin-top: 15px;
+    }
+
+        .MenuTrang li {
+            display: inline-block; /* Sử dụng inline-block để dễ dàng đặt kích thước */
+        }
+
+        .MenuTrang a,
+        .MenuTrang span {
+            display: inline-block;
+            width: 38px;
+            height: 30px;
+            line-height: 30px; /* Canh giữa theo chiều dọc */
+            text-align: center;
+            background-color: #4dc7a4; /* Màu xanh lá */
+            color: #fff; /* Màu chữ trắng */
+            border-radius: 5px; /* Bo góc */
+            margin: 0 5px; /* Khoảng cách giữa các ô */
+            text-decoration: none; /* Bỏ gạch chân */
+            transition: background-color 0.3s ease; /* Hiệu ứng mượt khi hover */
+        }
+
+            /* Hiệu ứng hover */
+            .MenuTrang a:hover {
+                background-color: rgb(120, 183, 82); /* Màu xanh lá đậm hơn khi hover */
+            }
+
+        /* Đánh dấu trang hiện tại */
+        .MenuTrang .active {
+            background-color: rgb(132, 206, 132); /* Màu xanh lá đậm cho trang hiện tại */
+            cursor: default; /* Không cho phép click */
+        }
+</style>

@@ -11,7 +11,11 @@ namespace BOOK.Controllers
     public class NguoidungController : Controller
     {
         // GET: Nguoidung
+<<<<<<< HEAD
         DataTHB2Entities1 db = new DataTHB2Entities1();
+=======
+        DataTHB2Entities db = new DataTHB2Entities();
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         public ActionResult Index()
         {
             return View();
@@ -86,11 +90,18 @@ namespace BOOK.Controllers
             //Gán giá trị người dùng nhập liệu cho các biến
             var tedn = collection["TenDN"];
             var matkhau = collection["Matkhau"];
+<<<<<<< HEAD
             if (string.IsNullOrEmpty(tedn))
             {
                 ViewData["Loi1"] = "Phải nhập tên đăng nhập";
             }
             else if (string.IsNullOrEmpty(matkhau))
+=======
+            if(string.IsNullOrEmpty(tedn))
+            {
+                ViewData["Loi1"] = "Phải nhập tên đăng nhập";
+            }else if (string.IsNullOrEmpty(matkhau))
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
             {
                 ViewData["Loi2"] = "Phải nhập mật khẩu";
             }
@@ -98,9 +109,15 @@ namespace BOOK.Controllers
             {
                 //Gán giá trị cho đối tượng tạo mới
                 KHACHHANG kh = db.KHACHHANGs.SingleOrDefault(n => n.Taikhoan == tedn && n.Matkhau == matkhau);
+<<<<<<< HEAD
                 if (kh != null)
                 {
                     //ViewBag.Thongbao = "Chúc mừng đăng nhập thành công";
+=======
+                if(kh != null)
+                {
+                    ViewBag.Thongbao = "Chúc mừng đăng nhập thành công";
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
                     Session["Taikhoan"] = kh;
                     return RedirectToAction("Index", "Default");
                 }

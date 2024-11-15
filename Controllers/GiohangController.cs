@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+<<<<<<< HEAD
 using System.Text;
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
 using System.Web;
 using System.Web.Mvc;
 
@@ -13,7 +16,11 @@ namespace BOOK.Controllers
         // GET: Giohang
 
         //Tao doi tuong data chua du lieu tu model dbBansach da tao
+<<<<<<< HEAD
         DataTHB2Entities1 data = new DataTHB2Entities1();
+=======
+        DataTHB2Entities data = new DataTHB2Entities();
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         //Lay gio hang
         //public List<Giohang> Laygiohang()
         //{
@@ -111,7 +118,11 @@ namespace BOOK.Controllers
         //Cap nhat gio hang
 
         public ActionResult CapnhatGiohang(int iMaSP, FormCollection f)
+<<<<<<< HEAD
         {
+=======
+        {       
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
             List<Giohang> lstGiohang = Laygiohang();
             Giohang sanpham = lstGiohang.SingleOrDefault(n => n.iMasach == iMaSP);
             if (sanpham != null)
@@ -122,7 +133,11 @@ namespace BOOK.Controllers
                 }
                 else
                 {
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
                     ViewBag.ErrorMessage = "Số lượng không hợp lệ.";
                 }
             }
@@ -181,7 +196,11 @@ namespace BOOK.Controllers
             ViewBag.Tongtien = TongTien();
             return View(lstGiohang);
 
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         }
 
         public ActionResult DatHang(FormCollection collection)
@@ -198,7 +217,11 @@ namespace BOOK.Controllers
             ddh.Dathanhtoan = false;
             data.DONDATHANGs.Add(ddh);
             data.SaveChanges();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
             //data.DONDATHANGs.InsertOnSubmit(ddh);
             //data.SubmitChanges();
 

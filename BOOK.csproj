@@ -1,5 +1,8 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<<<<<<< HEAD
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -45,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -61,6 +65,12 @@
     <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
+=======
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
@@ -107,6 +117,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Content\css\mdb.dark.min.css" />
     <Content Include="Content\css\mdb.dark.rtl.min.css" />
     <Content Include="Content\css\mdb.min.css" />
@@ -118,6 +129,8 @@
     <Content Include="Content\Hinhsanpham\templatemo_image_05.jpg" />
     <Content Include="Content\Hinhsanpham\templatemo_image_06.jpg" />
     <Content Include="Content\images\Icon_main.png" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <Content Include="Content\images\manufacture.png" />
     <Content Include="Content\images\templatemo_ads.jpg" />
     <Content Include="Content\images\templatemo_bg.jpg" />
@@ -132,6 +145,7 @@
     <Content Include="Content\images\templatemo_image_03.jpg" />
     <Content Include="Content\images\templatemo_image_04.jpg" />
     <Content Include="Content\images\templatemo_menu_bg.jpg" />
+<<<<<<< HEAD
     <Content Include="Content\img\Châm ngôn\Lớn để trưởng thành\chamngon.jpg" />
     <Content Include="Content\img\Khoa học viễn tưởng\Tình yêu và cuộc sống\tinhyeu.jpg" />
     <Content Include="Content\img\Kỹ năng sống\Kỹ năng sống cho người trẻ\kynangsong.jpg" />
@@ -400,6 +414,17 @@
     <Content Include="Script\tinymce_7.5.1\tinymce\js\tinymce\themes\silver\theme.min.js" />
     <Content Include="Script\tinymce_7.5.1\tinymce\js\tinymce\tinymce.min.js" />
     <Content Include="Global.asax" />
+=======
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\templatemo_style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Hinhsanpham\templatemo_image_01.jpg" />
+    <Content Include="Hinhsanpham\templatemo_image_02.jpg" />
+    <Content Include="Hinhsanpham\templatemo_image_03.jpg" />
+    <Content Include="Hinhsanpham\templatemo_image_04.jpg" />
+    <Content Include="Hinhsanpham\templatemo_image_05.jpg" />
+    <Content Include="Hinhsanpham\templatemo_image_06.jpg" />
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -414,16 +439,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
     <Compile Include="Controllers\AdminController.cs" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\GiohangController.cs" />
     <Compile Include="Controllers\NguoidungController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <Compile Include="Models\CHITIETDONHANG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -461,7 +492,10 @@
     <Compile Include="Models\TACGIA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\ThongKeSachModel.cs" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <Compile Include="Models\VIETSACH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -469,6 +503,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+<<<<<<< HEAD
     <Content Include="Content\js\mdb.es.min.js.map" />
     <Content Include="Content\js\mdb.umd.min.js.map" />
     <Content Include="Content\css\mdb.dark.min.css.map" />
@@ -733,6 +768,8 @@
     <Content Include="Content\src\scss\free\mixins\_ripple.scss" />
     <Content Include="Content\src\scss\free\mixins\_table-variants.scss" />
     <Content Include="Content\src\scss\mdb.free.scss" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -740,14 +777,21 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+<<<<<<< HEAD
     <Content Include="Script\tinymce_7.5.1\tinymce\CHANGELOG.md" />
     <Content Include="Script\tinymce_7.5.1\tinymce\js\tinymce\langs\README.md" />
     <Content Include="Script\tinymce_7.5.1\tinymce\js\tinymce\license.md" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <None Include="packages.config" />
     <Content Include="Views\_LayoutPage.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\Chude.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+<<<<<<< HEAD
+=======
+    <Content Include="Views\Shared\_Layout.cshtml" />
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <Content Include="Views\Default\NhaXB.cshtml" />
     <Content Include="Views\Default\Details.cshtml" />
     <Content Include="Views\Default\SPTheochude.cshtml" />
@@ -759,6 +803,7 @@
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
     <Content Include="Views\Giohang\Dathang.cshtml" />
     <Content Include="Views\Giohang\Xacnhandonhang.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Admin\Login.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
@@ -768,6 +813,8 @@
     <Content Include="Views\Admin\Xoasach.cshtml" />
     <Content Include="Views\Admin\SuaSach.cshtml" />
     <Content Include="Views\Admin\ThongKeSach.cshtml" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -779,12 +826,17 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Script\tinymce_7.5.1\tinymce\js\tinymce\tinymce.d.ts" />
   </ItemGroup>
+=======
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -815,10 +867,14 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+<<<<<<< HEAD
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
     <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
   <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+=======
+  </Target>
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

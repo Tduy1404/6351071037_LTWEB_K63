@@ -6,18 +6,31 @@
 <h1>Thong tin chi tiet sach</h1>
 <div id="templatemo_content_right">
 
+<<<<<<< HEAD
     <h1>@Model.Tensach </h1>
     <div class="image_panel">  <img alt="@Model.Tensach" src="~/Content/Hinhsanpham/@Model.Anhbia" width="100" height="150" /></div>
     <h2>Read the lessons - Watch the videos - Do the exercises</h2>
     <ul>
         <li>Price: <a href="#">@Model.Giaban</a></li>
         <li>Ngay cap nhat @Model.Giaban</li>
+=======
+    <h1>@Model.Tensach</h1>
+    <div class="image_panel">  <img alt="@Model.Tensach" src="~/Hinhsanpham/@Model.Anhbia" width="100" height="150" /></div>
+    <h2>Read the lessons - Watch the videos - Do the exercises</h2>
+    <ul>
+        <li>Price: <a href="#">@Model.Giaban</a></li>
+        <li>Ngay cap nhat @Model.Ngaycapnhat</li>
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         <li>So luong ton: @Model.Soluongton</li>
 
     </ul>
     <span>@Model.Mota</span>
     <div id="Datmua">
+<<<<<<< HEAD
         <a href="@Url.Action("ThemGiohang", "GioHang", new { iMasach = @Model.Masach, strURL = Request.Url.ToString() })">
+=======
+        <a href="@Url.Action("ThemGiohang", "GioHang", new { iMasach = @Model.Masach, strURL = "/GioHang/GioHang" })">
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
             ĐẶT MUA
         </a>
     </div>

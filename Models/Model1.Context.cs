@@ -13,10 +13,17 @@ namespace BOOK.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
+<<<<<<< HEAD
     public partial class DataTHB2Entities1 : DbContext
     {
         public DataTHB2Entities1()
             : base("name=DataTHB2Entities1")
+=======
+    public partial class DataTHB2Entities : DbContext
+    {
+        public DataTHB2Entities()
+            : base("name=DataTHB2Entities")
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         {
         }
     
@@ -25,7 +32,10 @@ namespace BOOK.Models
             throw new UnintentionalCodeFirstException();
         }
     
+<<<<<<< HEAD
         public DbSet<Admin> Admins { get; set; }
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         public DbSet<CHITIETDONHANG> CHITIETDONHANGs { get; set; }
         public DbSet<CHUDE> CHUDEs { get; set; }
         public DbSet<DONDATHANG> DONDATHANGs { get; set; }

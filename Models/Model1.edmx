@@ -5,6 +5,7 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DataTHB2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<<<<<<< HEAD
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="UsreAdmin" />
@@ -13,6 +14,8 @@
           <Property Name="Password" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="HoTen" Type="nvarchar" MaxLength="60" />
         </EntityType>
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         <EntityType Name="CHITIETDONHANG">
           <Key>
             <PropertyRef Name="MaDonHang" />
@@ -182,7 +185,10 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DataTHB2ModelStoreContainer">
+<<<<<<< HEAD
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
           <EntitySet Name="CHITIETDONHANG" EntityType="Self.CHITIETDONHANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CHUDE" EntityType="Self.CHUDE" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DONDATHANG" EntityType="Self.DONDATHANG" Schema="dbo" store:Type="Tables" />
@@ -225,6 +231,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DataTHB2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<<<<<<< HEAD
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="UsreAdmin" />
@@ -233,6 +240,8 @@
           <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="HoTen" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
         </EntityType>
+=======
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
         <EntityType Name="CHITIETDONHANG">
           <Key>
             <PropertyRef Name="MaDonHang" />
@@ -415,8 +424,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <EntityContainer Name="DataTHB2Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
+=======
+        <EntityContainer Name="DataTHB2Entities" annotation:LazyLoadingEnabled="true">
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
           <EntitySet Name="CHITIETDONHANGs" EntityType="Self.CHITIETDONHANG" />
           <EntitySet Name="CHUDEs" EntityType="Self.CHUDE" />
           <EntitySet Name="DONDATHANGs" EntityType="Self.DONDATHANG" />
@@ -459,6 +472,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+<<<<<<< HEAD
         <EntityContainerMapping StorageEntityContainer="DataTHB2ModelStoreContainer" CdmEntityContainer="DataTHB2Entities1">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="DataTHB2Model.Admin">
@@ -469,6 +483,9 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+=======
+        <EntityContainerMapping StorageEntityContainer="DataTHB2ModelStoreContainer" CdmEntityContainer="DataTHB2Entities">
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
           <EntitySetMapping Name="CHITIETDONHANGs">
             <EntityTypeMapping TypeName="DataTHB2Model.CHITIETDONHANG">
               <MappingFragment StoreEntitySet="CHITIETDONHANG">

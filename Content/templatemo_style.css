@@ -233,8 +233,13 @@ img {
 
 #templatemo_content_right .templatemo_product_box {
 	float: left;
+<<<<<<< HEAD
 	width: 250px;
 	height: 180px;
+=======
+	width: 303px;
+	height: 210px;
+>>>>>>> e6d7a8a624ea7d3de0dc4f2fa8432bb450a6a75c
 	padding: 10px;
 	border: 1px solid #333;
 }
